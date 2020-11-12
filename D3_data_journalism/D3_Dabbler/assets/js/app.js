@@ -2,7 +2,7 @@
 
 // Create containter diminsions
 var svgWidth = 960;
-var svgHeight = 500;
+var svgHeight = 540;
 
 var margin = {
   top: 20,
