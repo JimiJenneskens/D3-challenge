@@ -1,8 +1,8 @@
 // @TODO: YOUR CODE HERE!
 
-// Create containter diminsions
-var svgWidth = 960;
-var svgHeight = 540;
+// create dimensions
+var svgWidth = 1080;
+var svgHeight = 780;
 
 var margin = {
   top: 20,
@@ -14,18 +14,18 @@ var margin = {
 var width = svgWidth - margin.left - margin.right;
 var height = svgHeight - margin.top - margin.bottom;
 
-// Add SVG elements
+// add SVG elements
 var svg = d3
   .select("#scatter")
   .append("svg")
   .attr("width", svgWidth)
   .attr("height", svgHeight);
 
-// Group elements together
+// group elements together
 var chartGroup = svg.append("g")
   .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
-// Import and format the data to numerical values
+// import data
 d3.csv("assets/data/data.csv").then(function(healthData) {
     healthData.forEach(function(data) {
       data.age = +data.age;
